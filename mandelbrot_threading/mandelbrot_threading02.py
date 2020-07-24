@@ -50,7 +50,7 @@ def func_thread(id,surface,lock,barrier):
     scale = 0.006
     offset = complex(-0.55,0.0)  
     # plot in x and y
-    y_min = id * 5
+    y_min = id * 4
     
     for y in range(y_min, screen_w):
         for x in range(screen_w):
