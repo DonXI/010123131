@@ -69,3 +69,5 @@ Q5 = "(((I0&I1&!I2)+!I1)+I3)"
 x1 = MakeExpt(Q1)
 x1.convenrtfunction()
 x1.infixtopostfix()
+
+# REF https://github.com/suphinya/010123131/blob/master/Boolean%20Expressions/test1.py
