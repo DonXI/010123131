@@ -20,7 +20,7 @@ class Make_expressiontree:
         self.postfix = []      
         self.opstack = self.stack()
         self.opr = {'!':3,'+':2,'&':2,'(':1}
-        self.operations = "+&!()"
+        self.operators = "+&!()"
         self.stack_tree = self.stack()
         self.newnode = self.Node(None)
     
@@ -35,7 +35,7 @@ class Make_expressiontree:
                 self.convert_infix.append("I2")
             elif self.tokenlist[i] == "I" and self.tokenlist[i+1] == '3':
                 self.convert_infix.append("I3")
-            elif self.tokenlist[i] in self.operations :
+            elif self.tokenlist[i] in self.operators :
                 self.convert_infix.append(self.tokenlist[i])
             elif self.tokenlist[i] in "01" and self.tokenlist[i-1] != "I":
                 self.convert_infix.append(self.tokenlist[i])
