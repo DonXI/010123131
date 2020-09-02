@@ -1,3 +1,7 @@
+################################################################
+# File: calculator PySimpleGui
+# No: 6201012620082
+################################################################
 import PySimpleGUI as sg
 
 button_num : dict = {'size' : (4,1), 'button_color' : ('black',"#F8F8F8"),
