@@ -11,6 +11,8 @@ let element = document.documentElement;
 let game_speed;
 let count_score;
 let score;
+const speed_bg = 0.5;
+
 let keyboard_input = {
     up:false,
     space:false,
@@ -168,9 +170,8 @@ function random_enemy(){
 }
 
 function spawn_enemy () {
-    let x_pos = random_dist(650, 750);
+    let x_pos = random_dist(canvas.width, canvas.width + 100);
     let rand_enemy = random_enemy();
-    //console.log(rand_enemy);
     enemy = new Enemy(x_pos,rand_enemy);
     enemies.push(enemy);
 }
@@ -190,13 +191,13 @@ function handlebackground (){
         bg.x1 = bg.width;
     }
     else {
-        bg.x1 -= 0.5;//speed bg
+        bg.x1 -= speed_bg;
     }
     if (bg.x2 <= -bg.width) {
         bg.x2 = bg.width;
     }
     else {
-        bg.x2 -= 0.5;
+        bg.x2 -= speed_bg;
     }
     context.drawImage(background, bg.x1, bg.y, bg.width, bg.height);
     context.drawImage(background, bg.x2, bg.y, bg.width, bg.height);
@@ -205,10 +206,10 @@ function handlebackground (){
 
 let initialSpawnTimer = 200;
 let spawnTimer = initialSpawnTimer;
+
 function update () {
     requestAnimationFrame(update);
     handlebackground();
-    //context.clearRect(0, 0, canvas.width, canvas.height);
     spawnTimer--;
     if (spawnTimer <= 0) {
         spawn_enemy();
