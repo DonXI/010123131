@@ -265,8 +265,8 @@ document.addEventListener("keyup", keyboard_input.keyListener);
 requestAnimationFrame(update);
 
 
-sprite_sheet.image.src = "sp_100x50_ver01.png";
-enemy_sheet.src = "sum_enemy3.png";
+sprite_sheet.image.src = "spiderman.png";
+enemy_sheet.src = "sum_enemy.png";
 background.src = 'bg01.jpg';
 
 start();
