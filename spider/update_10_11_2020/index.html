@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>SPIDER RUNNER 10-11-2563</title>
+        <title>Spider Runner | DEMO</title>
+        <style>
+            .text-center {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+            }
+        </style>
     </head>
-    <style>
-        .game-center {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 100px;  
-        }
-    </style>
     <body>
-        <div class="game-center">
-        <canvas id="canvas" style="border:1px solid #000000;"></canvas>
-        <script src="main.js"></script>
+        <div class="text-center">
+            <canvas id="canvas" style="border:1px solid #000000;"></canvas>
+            
+            <h1 class="display-2 mb-5" id="current-word">Random Words</h1>
+            <input class="input" type="text" required="required" id="word-input" placeholder="Your Answer ..."/>
+
+            <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+            <script src="main.js"></script>
         </div>
     </body>
 </html>
